@@ -1,5 +1,5 @@
-import './reset.css';
-import './App.css';
+import './stylesheets/reset.css';
+import './stylesheets/App.css';
 import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

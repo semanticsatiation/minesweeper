@@ -200,5 +200,5 @@
 @font-face {
     font-family: 'Digital';
     font-weight: 900;
-    src: local('Digital'), url("./fonts/digital-7.ttf") format('truetype');
+    src: local('Digital'), url("../fonts/digital-7.ttf") format('truetype');
 }
