@@ -40,19 +40,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-html {
-  height: 99.5vh;
-  position: relative;
-  min-width: 280px;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100%;
-  justify-content: center;
-}
-
-#root {
-  height: 100%;
-  box-sizing: border-box;
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    text-align: center;
 }

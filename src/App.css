@@ -1,35 +1,204 @@
-.App {
+.menu-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #282c34;
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.App {
+  display: flex;
+  padding: 10px;
+}
+
+.menu, .end-game-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.menu label, .end-game-menu label {
+  margin-right: 10px;
+}
+
+.menu input, .end-game-menu input {
+  background: white;
+  width: 50px;
+  margin-right: 10px;
+}
+
+
+.menu > h1, .end-game-menu > h1 {
+  padding: 10px;
+}
+
+.menu .level-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.menu .custom-form, .end-game-menu .custom-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.menu button, .end-game-menu button {
+  color: white;
+  background: #808080;
+  padding: 10px;
+}
+
+.menu button:hover, .end-game-menu button:hover {
+  filter: brightness(80%);
+}
+
+.menu button:active, .end-game-menu button:active  {
+  filter: brightness(60%);
+}
+
+.end-game-menu .level-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.end-game-result {
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgb(163, 161, 161);
+  padding: 20px;
+  border-top: 8px outset rgb(224, 224, 224);
+  border-left: 8px outset   rgb(224, 224, 224);
+  border-bottom: 8px outset rgb(218, 217, 217);
+  border-right: 8px outset rgb(218, 217, 217);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 8px outset #808080;
+  border-left: 8px outset #808080;
+  border-bottom: 8px inset white;
+  border-right: 8px inset white;
+  background: rgb(163, 161, 161);
+  padding: 10px;
+  width: 500px;
+  font-size: 30px;
+}
+
+.flag, .lose, .flag-counter {
   color: red;
 }
 
+.win {
+  color: rgb(0, 255, 0);
+}
+
+.flag-counter {
+  background:  rgba(255, 255, 255, 0.733);
+  border-top: 3px outset #808080;
+  border-left: 3px outset #808080;
+  border-bottom: 3px inset white;
+  border-right: 3px inset white;
+  padding: 0 5px;
+}
+
+.flag-container {
+  display: flex;
+}
+
+.flag-container > span {
+  margin: 0 5px;
+}
+
+.flag-instructions {
+  position: relative;
+}
+
+.mouse {
+  position: absolute;
+  font-size: 20px;
+  top: 6px;
+  right: -6px;
+  color: white;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 55px;
+  color: red;
+  background:  rgba(255, 255, 255, 0.733);
+  border-top: 3px outset #808080;
+  border-left: 3px outset #808080;
+  border-bottom: 3px inset white;
+  border-right: 3px inset white;
+  font-family: Digital;
+}
+
+/* hardest settings */
 .grid {
-  height: 80%;
-  width: 80%;
-  background: rgb(163, 161, 161);
-  border: 1px solid red;
+  margin-top: 20px;
+  border-top: 8px outset #808080;
+  border-left: 8px outset #808080;
+  border-bottom: 8px inset white;
+  border-right: 8px inset white;
 }
 
 .row {
   display: flex;
-  height: 12.5%;
 }
 
 .mine {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgba(196, 192, 192, 0.63);
-  flex: 1;
-  font-size: 30px;
+  background: rgb(163, 161, 161);
+  border-top: 2px inset white;
+  border-left: 2px inset white;
+  border-bottom: 2px outset #8080808a;
+  border-right: 2px outset #8080808a;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  font-weight: bolder;
   border-style: outset;
 }
 
-.reveal {
-  border-style: inset;
+.mine:active, .reveal {
+  border-top: 2px inset  #8080808a;
+  border-left: 2px inset  #8080808a;
+  border-bottom: 2px inset white;
+  border-right: 2px inset white;
+}
+
+.disable {
+  pointer-events: none;
+}
+
+@font-face {
+    font-family: 'Digital';
+    font-weight: 900;
+    src: local('Digital'), url("./fonts/digital-7.ttf") format('truetype');
 }
