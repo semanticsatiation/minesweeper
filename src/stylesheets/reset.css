@@ -35,6 +35,10 @@ img {
   height: auto;
 }
 
+input {
+  color: black;
+}
+
 button,
 input[type="submit"] {
   cursor: pointer;
